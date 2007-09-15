@@ -45,7 +45,7 @@
 Name:           juddi
 Summary:        Open source Java implementation UDDI specification
 Version:        0.9
-Release:        %mkrel 0.rc4.2.0.1
+Release:        %mkrel 0.rc4.2.0.2
 Epoch:          0
 URL:            http://ws.apache.org/juddi/
 License:        Apache Software License
@@ -61,8 +61,6 @@ Requires:       jakarta-commons-logging
 Requires:       tomcat5-servlet-2.4-api
 BuildRoot:       %{_tmppath}/%{name}-%{version}-%{release}-root
 %if %{gcj_support}
-Requires(post): java-gcj-compat
-Requires(postun): java-gcj-compat
 BuildRequires:  java-gcj-compat-devel
 %else
 BuildArch:      noarch
