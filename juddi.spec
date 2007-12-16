@@ -45,13 +45,13 @@
 Name:           juddi
 Summary:        Open source Java implementation UDDI specification
 Version:        0.9
-Release:        %mkrel 0.rc4.2.0.2
+Release:        %mkrel 0.rc4.2.0.3
 Epoch:          0
 URL:            http://ws.apache.org/juddi/
 License:        Apache Software License
 Group:          Development/Java
 Source0:        %{name}-0.9rc4.tar.bz2
-BuildRequires:  jpackage-utils
+BuildRequires:  java-rpmbuild
 BuildRequires:  ant
 BuildRequires:  axis
 BuildRequires:  jakarta-commons-logging
