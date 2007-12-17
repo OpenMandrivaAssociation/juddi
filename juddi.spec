@@ -59,7 +59,6 @@ BuildRequires:  tomcat5-servlet-2.4-api
 Requires:       axis
 Requires:       jakarta-commons-logging
 Requires:       tomcat5-servlet-2.4-api
-BuildRoot:       %{_tmppath}/%{name}-%{version}-%{release}-root
 %if %{gcj_support}
 BuildRequires:  java-gcj-compat-devel
 %else
