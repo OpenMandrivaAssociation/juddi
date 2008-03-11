@@ -115,7 +115,7 @@ build-jar-repository lib \
 
 %build
 unset CLASSPATH
-%{ant} ear javadoc
+%{ant} -Dant.build.javac.target=1.4 -Dant.build.javac.source=1.4 ear javadoc
 
 %install
 rm -rf $RPM_BUILD_ROOT
