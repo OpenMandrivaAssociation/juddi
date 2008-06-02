@@ -37,7 +37,7 @@
 #  cvs export -r juddi-0_9rc4 ws-juddi
 #  find ws-juddi -name '*.jar' | xargs rm
 
-%define basedir %{_localstatedir}/lib/lib/%{name}
+%define basedir %{_localstatedir}/lib/%{name}
 #%define appdir %{basedir}/webapps
 %define sqldir %{basedir}/sql
 %define homedir %{_datadir}/%{name}
