@@ -29,7 +29,7 @@
 #
 
 %define section         free
-%define gcj_support 1
+%define gcj_support 0
 
 # To make the tarball:
 #  export CVSROOT=:pserver:anoncvs@cvs.apache.org:/home/cvspublic
@@ -158,9 +158,7 @@ cp -pr build/docs/apiDocs/ \
     $RPM_BUILD_ROOT%{_javadocdir}/%{name}-%{version}
 ln -s %{name}-%{version} $RPM_BUILD_ROOT%{_javadocdir}/%{name}
 
-%if %{gcj_support}
-%{_bindir}/aot-compile-rpm
-%endif
+%{gcj_files}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -176,8 +174,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(0644,root,root,0755)
 %{_javadir}/juddi/*.jar
-%dir %{_libdir}/gcj/%{name}
-%attr(-,root,root) %{_libdir}/gcj/%{name}/*
+%{gcj_files}
 
 %files javadoc
 %defattr(0644,root,root,0755)
