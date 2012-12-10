@@ -45,7 +45,7 @@
 Name:           juddi
 Summary:        Open source Java implementation UDDI specification
 Version:        0.9
-Release:        %mkrel 5.rc4.2.0.4
+Release:        %mkrel 0.rc4.2.0.4
 Epoch:          0
 URL:            http://ws.apache.org/juddi/
 License:        Apache Software License
@@ -196,3 +196,48 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(0644,root,root,0755)
 %{_javadir}/juddi/*.war
 %dir %{homedir}/webapps
+
+
+%changelog
+* Mon Jun 02 2008 Alexander Kurtakov <akurtakov@mandriva.org> 0:0.9-0.rc4.2.0.4mdv2009.0
++ Revision: 214242
+- bump release
+- rebuilt for  %%_localstatedir change and disable gcj
+
+  + Pixel <pixel@mandriva.com>
+    - fix %%_localstatedir usage (cf mdvbz#22312)
+    - adapt to %%_localstatedir now being /var instead of /var/lib (#22312)
+
+* Tue Mar 11 2008 Alexander Kurtakov <akurtakov@mandriva.org> 0:0.9-0.rc4.2.0.3mdv2008.1
++ Revision: 185780
+- fix build
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - kill re-definition of %%buildroot on Pixel's request
+
+  + Anssi Hannula <anssi@mandriva.org>
+    - buildrequire java-rpmbuild, i.e. build with icedtea on x86(_64)
+
+* Sat Sep 15 2007 Anssi Hannula <anssi@mandriva.org> 0:0.9-0.rc4.2.0.2mdv2008.0
++ Revision: 87449
+- rebuild to filter out autorequires of GCJ AOT objects
+- remove unnecessary Requires(post) on java-gcj-compat
+
+* Wed Aug 08 2007 David Walluck <walluck@mandriva.org> 0:0.9-0.rc4.2.0.1mdv2008.0
++ Revision: 60062
+- Import juddi
+
+
+
+* Wed Jul 18 2007 Alexander Kurtakov <akurtakov@active-lynx.com> - 0:0.9-0.rc4.2.0.1mdv2008.0
+- Adapt for Mandriva
+- Add gcj_support
+
+* Wed Dec 07 2005 Fernando Nasser <fnasser@redhat.com> 0:0.9-0.rc4.2jpp
+- First JPP 1.7 build
+
+* Mon Jul 18 2005 Deepak Bhole <dbhole@redhat.com> 0:0.9-0.rc4.1jpp
+- Initial build.
