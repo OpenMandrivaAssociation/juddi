@@ -47,7 +47,7 @@ Summary:        Open source Java implementation UDDI specification
 Version:        0.9
 Release:        %mkrel 0.rc4.2.0.4
 Epoch:          0
-URL:            http://ws.apache.org/juddi/
+URL:            https://ws.apache.org/juddi/
 License:        Apache Software License
 Group:          Development/Java
 Source0:        %{name}-0.9rc4.tar.bz2
